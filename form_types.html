@@ -4,58 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Types</title>
-
-
 </head>
 <body>
     <header>
         <h1>Form Types</h1>
     </header>
     
-        
     <section id="forms-related">
-        <h3>Create the necessary html elements that best fit for the following scenario. 5pts each. Each cases should be under form element and with proper working button.</h3>
-         
+        <h3>Create the necessary html elements that best fit for the following scenario. 5pts each. Each case should be under form element and with a proper working button.</h3>
+        
         <!-- EXAMPLE PROBLEM -->
-        A meeting for tomorrow requires user confirmation to join or not. 
-        Write the correct form output for the the above case.
+        <p>A meeting for tomorrow requires user confirmation to join or not. 
+        Write the correct form output for the the above case.</p>
 
         <form>
             <label>Do you wish to join?</label>
-            <input type="radio" name="confirmation_status"><label>Yes</label>
-            <input type="radio" name="confirmation_status"><label>No</label>
+            <input type="radio" name="confirmation_status" value="Yes"><label>Yes</label>
+            <input type="radio" name="confirmation_status" value="No"><label>No</label>
             <input type="button" value="confirm">
         </form>
-        <!-- EXAMPLE PROBLEM -->
+        <!-- EXAMPLE PROBLEM ENDS -->
 
         <div style="margin-top: 2rem;">
-            <ol>    
+            <ol>
+                <!-- SCENARIO 1 -->
                 <li style="margin-bottom: 0.5rem;"><strong>SCENARIO: 1</strong></li>
-                <div style="margin-bottom: 2rem;">A client is requesting to add a 6 digit numeric pin field to form. Write the correct form output for this case.</div>
+                <div style="margin-bottom: 2rem;">A client is requesting to add a 6-digit numeric pin field to form. Write the correct form output for this case.</div>
+                
+                <form action="pin_action.php" method="POST">
+                    <label for="pin">Enter 6-digit PIN:</label>
+                    <input type="number" id="pin" name="pin" min="100000" max="999999" required>
+                    <input type="submit" value="Submit PIN">
+                </form>
+                <!-- END SCENARIO 1 -->
 
-                    <!--ANSWER HERE-->
-                    
-                    <!--END ANSWER HERE-->
-
+                <!-- SCENARIO 2 -->
                 <li style="margin-bottom: 0.5rem;"><strong>SCENARIO: 2</strong></li>
-                <div style="margin-bottom: 2rem;">An dental appointment form requires a selection of date that only limits from today's date(Sept 16, 2024) up to Sept 22, 2024</div>
+                <div style="margin-bottom: 2rem;">A dental appointment form requires a selection of date that only limits from today's date (Sept 16, 2024) up to Sept 22, 2024</div>
 
-                    <!--ANSWER HERE-->
-                    
-                    <!--END ANSWER HERE-->
+                <form action="appointment_action.php" method="POST">
+                    <label for="appointment-date">Select Appointment Date:</label>
+                    <input type="date" id="appointment-date" name="appointment-date" min="2024-09-16" max="2024-09-22" required>
+                    <input type="submit" value="Submit Appointment">
+                </form>
+                <!-- END SCENARIO 2 -->
 
-                    
-            
+                <!-- SCENARIO 3 -->
                 <li style="margin-bottom: 0.5rem;"><strong>SCENARIO: 3</strong></li>
-                <div style="margin-bottom: 2rem;">A webvisitor wanted to subscribe to a newsletter using his/her email. Write the necessary input form for this case.</div>
+                <div style="margin-bottom: 2rem;">A web visitor wanted to subscribe to a newsletter using his/her email. Write the necessary input form for this case.</div>
 
-                    <!--ANSWER HERE-->
-                    
-                    <!--END ANSWER HERE-->  
+                <form action="subscribe_action.php" method="POST">
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="submit" value="Subscribe">
+                </form>
+                <!-- END SCENARIO 3 -->
             </ol>
         </div>    
     </section>
-
-
 </body>
 </html>
